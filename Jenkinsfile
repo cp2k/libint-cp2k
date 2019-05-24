@@ -10,10 +10,10 @@ pipeline {
         dir("build") {
           sh """../configure \
             --enable-eri=1 --enable-eri2=1 --enable-eri3=1 \
-            --with-max-am=6 \
-            --with-eri-max-am=6,5 \
-            --with-eri2-max-am=6,5 \
-            --with-eri3-max-am=6,5 \
+            --with-max-am=5 \
+            --with-eri-max-am=5,4 \
+            --with-eri2-max-am=5,4 \
+            --with-eri3-max-am=5,4 \
             --with-opt-am=3 \
             --enable-generic-code --disable-unrolling
             make export
