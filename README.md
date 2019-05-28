@@ -1,6 +1,16 @@
-# cp2k-libint
+# libint-cp2k
 
-Provides tarballs of CP2K-configured libint releases.
+Provides tarballs of CP2K-configured libint releases for different maximum angular momenta.
+
+The available libint tarballs are released as `libint-<version>-cp2k-lmax-<lmax>`
+with `<version>` the corresponding libint version and `<lmax>` the maximum supported angular momentum quantum number.
+
+The specific configuration options of a libint tarball can be found in the `compiler.config` file.
+
+For further information on how to build libint, refer to the [libint wiki](https://github.com/evaleev/libint/wiki#compiling-libint-library).
+CP2K requires that libint is built with *Fortran bindings*.
+
+If you need a different libint configuration for CP2K, please let us know by submitting an issue with the exact configuration option.
 
 ## Internal: Build Setup
 
@@ -22,7 +32,7 @@ Steps:
   * Connect the Docker host and register the image as a Docker Template, labelling it `cp2k-libint`
   * Add credentials using a GitHub token for a service user capable of making releases
   * Create a new Multibranch Pipeline job, using as the inline `Jenkinsfile` the one provided in this repo (use `README.md` as the marker file)
-  
+
 Caveats:
 
 * At the time of creating this workflow there was no (easy) way to provide a `Jenkinsfile` from a separate repository which is why the `Jenkinsfile` in this repository is **not** automatically picked up but has to be copied to the Jenkins job.

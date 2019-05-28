@@ -32,13 +32,6 @@ pipeline {
             }
           }
         }
-        stage("lmax-7"){
-          steps {
-            script {
-              configure_libint(7)
-            }
-          }
-        }
       }
     }
   }
