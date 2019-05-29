@@ -7,7 +7,7 @@ with `<version>` the corresponding libint version and `<lmax>` the maximum suppo
 
 The specific configuration options of a libint tarball can be found in the `compiler.config` file.
 
-For further information on how to build libint, refer to the [libint wiki](https://github.com/evaleev/libint/wiki#compiling-libint-library).
+For further information on how to build libint, refer to [libint wiki: compiling libint library](https://github.com/evaleev/libint/wiki#compiling-libint-library).
 CP2K requires that libint is built with *Fortran bindings*.
 
 If you need a different libint configuration for CP2K, please let us know by submitting an issue with the exact configuration option.
