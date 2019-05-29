@@ -1,8 +1,8 @@
 # libint-cp2k
 
-Provides tarballs of CP2K-configured libint releases for different maximum angular momenta.
+Provides tarballs of CP2K-configured libint releases for different maximum angular momenta. The latest release can be downloaded [here](https://github.com/cp2k/libint-cp2k/releases/latest).
 
-The available libint tarballs are released as `libint-<version>-cp2k-lmax-<lmax>`
+The provided libint tarballs are named `libint-<version>-cp2k-lmax-<lmax>`
 with `<version>` the corresponding libint version and `<lmax>` the maximum supported angular momentum quantum number.
 
 The specific configuration options of a libint tarball can be found in the `compiler.config` file.
