@@ -32,6 +32,13 @@ pipeline {
             }
           }
         }
+        stage("lmax-7"){
+          steps {
+            script {
+              configure_libint(7)
+            }
+          }
+        }
       }
     }
   }
@@ -64,7 +71,7 @@ def configure_libint(lmax) {
 }
 
 def upload_tarballs(tarballs) {
-  def release_name = "libint_${TAG_NAME}_cp2k"
+  def release_name = "Libint ${TAG_NAME} CP2K"
 
     withCredentials([usernamePassword(credentialsId: 'cp2k-libint_github', passwordVariable: 'GITHUB_TOKEN', usernameVariable: 'GITHUB_USER')]) {
       withEnv(["RELEASE_NAME=${release_name}"]) {
