@@ -2,17 +2,24 @@
 
 Provides tarballs of CP2K-configured libint releases for different maximum angular momenta. The latest release can be downloaded [here](https://github.com/cp2k/libint-cp2k/releases/latest).
 
-The provided libint tarballs are named `libint-<version>-cp2k-lmax-<lmax>`
-with `<version>` the corresponding libint version and `<lmax>` the maximum supported angular momentum quantum number.
+## Choosing an appropriate libint version
 
-The specific configuration options of a libint tarball can be found in the `compiler.config` file.
+The provided libint tarballs are named `libint-<version>-cp2k-lmax-<lmax>`
+with `<version>` the corresponding libint version and `<lmax>` the maximum supported angular momentum (e.g. the `...-lmax-4` library providing support for up to g-type functions). Note that choosing higher values for `lmax` will increase build time and library size.
+
+More specifically, a libint version with max. angular momentum `lmax` has support for the following types of basis functions:
+* orbital basis functions with angular momentum up to `lmax` for integrals and `lmax - 1` for derivatives (4-center ERIs)
+* auxiliary (RI) basis functions with angular momentum up to `lmax + 2` for integrals and `lmax + 1` for derivatives (3- and 2-center ERIs).
+
+The specific configuration options of a libint tarball can be found in the `compiler.config` file. If you need a different libint configuration for CP2K, please let us know by submitting an issue with the exact `configure` options.
+
+## Build instructions
 
 For further information on how to build libint, refer to [libint wiki: compiling libint library](https://github.com/evaleev/libint/wiki#compiling-libint-library).
-CP2K requires that libint is built with **Fortran bindings**.
 
-If you need a different libint configuration for CP2K, please let us know by submitting an issue with the exact configuration option.
+**Important:** CP2K requires that libint is built with *Fortran bindings*.
 
-## Internal: Build Setup
+## Internal: Build Setup (CI)
 
 The following instructions are about our internal setup to automatically generate the provided libint2 source tarballs.
 
