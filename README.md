@@ -30,6 +30,7 @@ Requirements:
   * [Plugin: Docker](https://plugins.jenkins.io/docker-plugin)
   * [Plugin: Pipeline Utility Steps](https://plugins.jenkins.io/pipeline-utility-steps)
   * [Plugin: Multibranch Pipeline Inline Definition](https://plugins.jenkins.io/inline-pipeline)
+  * [Plugin: Basic Branch Build Strategies plugin](https://plugins.jenkins.io/basic-branch-build-strategies)
 * Docker host
 
 Steps:
