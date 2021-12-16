@@ -15,7 +15,7 @@ The specific configuration options of a libint tarball can be found in the `comp
 
 ## Build instructions
 
-The libint library is installed as part of the [CP2K toolchain](https://github.com/cp2k/cp2k/blob/master/INSTALL.md), which is based on the autoconf tool (see README inside the tar file):
+The libint library is installed as part of the [CP2K toolchain](https://github.com/cp2k/cp2k/blob/master/INSTALL.md), which is based on the autoconf tool (see README inside the tar file).
 
 **Important:** CP2K requires that libint is built with *Fortran bindings*.
 
